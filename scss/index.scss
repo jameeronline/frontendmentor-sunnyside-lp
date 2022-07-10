@@ -4,6 +4,11 @@
 @import "grid";
 @import "icons";
 
+html,
+body{
+    scroll-behavior: smooth;
+}
+
 body{
     color: $base-font-color;
     font-size: $base-font-size;
