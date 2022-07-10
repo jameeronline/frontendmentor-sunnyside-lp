@@ -14,23 +14,24 @@
   }
 }
 
-.icon {
-  display: inline-block;
-  background-size: contain;
-}
-.icon-arrow-down {
-  background: url(../images/icon-arrow-down.svg) no-repeat center;
-  height: 5.625rem;
-  width: 1.875rem;
-}
-@media (min-width: 992px) {
-  .icon {
-    height: 7rem;
-    width: 2rem;
-    margin-top: 6.5rem;
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    margin-top: -8px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
-
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 html,
 body {
   scroll-behavior: smooth;
@@ -53,10 +54,19 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
+header .hamburger-menu {
+  padding: 6px;
+}
 @media (min-width: 768px) {
   header .hamburger-menu {
     display: none;
   }
+}
+header .hamburger-menu.active {
+  background-color: hsl(198deg, 62%, 26%);
+}
+header .logo img {
+  width: 10rem;
 }
 @media (min-width: 768px) {
   header nav {
@@ -67,14 +77,18 @@ header .container {
   header nav {
     position: absolute;
     background: white;
-    top: 120%;
+    top: 110%;
     left: 1rem;
     right: 1rem;
     display: none;
+    z-index: 1;
   }
 }
 header nav.show {
   display: block;
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  transition-timing-function: ease-in-out;
 }
 header nav ul {
   list-style: none;
@@ -158,34 +172,63 @@ header nav a.active {
 }
 
 .hero {
-  height: 100vh;
   text-align: center;
   background: url(../images/desktop/image-header.jpg) no-repeat center bottom hsl(200deg, 100%, 62%);
   background-size: contain;
+  position: relative;
+  background-size: 220vw;
+  aspect-ratio: 1/1.4;
+}
+@media (min-width: 576px) {
+  .hero {
+    background-size: 200vw;
+    aspect-ratio: unset;
+    height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    background-size: 1600px;
+  }
 }
 .hero h1 {
   color: hsl(0deg, 0%, 100%);
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 2rem;
+  line-height: 1.2;
   font-family: "Fraunces", serif;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
+}
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+  }
+}
+.hero__content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
 }
 .hero .icon {
   display: inline-block;
-  background-size: contain;
 }
 .hero .icon-arrow-down {
   background: url(../images/icon-arrow-down.svg) no-repeat center;
   height: 5.625rem;
   width: 1.875rem;
+  background-size: contain;
 }
 @media (min-width: 992px) {
   .hero .icon {
     height: 7rem;
     width: 2rem;
-    position: absolute;
-    bottom: 42%;
   }
 }
 
@@ -253,6 +296,35 @@ header nav a.active {
   font-family: "Fraunces", serif;
   text-decoration: none;
   text-transform: uppercase;
+  align-self: baseline;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .feature a {
+    margin: auto;
+  }
+}
+.feature a:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  height: 0.5rem;
+  background-color: hsl(51deg, 100%, 86%);
+  border-radius: 1rem;
+  width: 110%;
+  top: -1rem;
+  z-index: -1;
+  left: -0.3rem;
+  transition: all 0.2s ease-in-out;
+}
+.feature a:hover:after {
+  background-color: hsl(51deg, 100%, 49%);
+}
+.feature a.secondary:after {
+  background-color: hsl(7deg, 99%, 92%);
+}
+.feature a.secondary:hover:after {
+  background-color: hsl(7deg, 99%, 70%);
 }
 
 .feature-sub {
@@ -274,11 +346,21 @@ header nav a.active {
   background-size: cover;
 }
 .feature-sub .description {
-  padding: 16rem 2rem 2rem 2rem;
+  padding: 60vw 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   justify-content: center;
+}
+@media (min-width: 576px) {
+  .feature-sub .description {
+    padding: 50vw 3rem 3rem 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .feature-sub .description {
+    padding: 20rem 3rem 3rem 3rem;
+  }
 }
 @media (min-width: 992px) {
   .feature-sub .description {
@@ -315,7 +397,7 @@ header nav a.active {
 }
 @media (min-width: 992px) {
   .testimonials {
-    padding: 8rem 0;
+    padding: 6rem 0;
   }
 }
 .testimonials h2 {
@@ -337,7 +419,7 @@ header nav a.active {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 3rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .testimonials-blocks {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;

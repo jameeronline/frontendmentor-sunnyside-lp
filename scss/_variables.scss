@@ -4,6 +4,7 @@ $desktop: 1440px;
 
 
 //Responsive Breakpoints
+$responsive-mobile-sm: 576px;
 $responsive-mobile: 768px;
 $responsive-tablet: 992px;
 $responsive-desktop: 1200px;
@@ -13,7 +14,9 @@ $responsive-desktop-lg: 1400px;
 
 // Primary
 $soft-red: hsl(7, 99%, 70%);
+$soft-red-light: hsl(7, 99%, 92%);
 $yellow: hsl(51, 100%, 49%);
+$yellow-light: hsl(51, 100%, 86%);
 $dark-desaturated-cyan: hsl(167, 40%, 24%);
 $dark-blue: hsl(198, 62%, 26%);
 $dark-moderate-cyan: hsl(168, 34%, 41%);
