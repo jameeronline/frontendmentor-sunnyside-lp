@@ -4,65 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <!-- FavIcon 👍 -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
+  <!-- Google Fonts 👍 -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+
+  <!-- Styles 👍 -->
+  <link rel="stylesheet" href="css/index.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
-  About
-  Services
-  Projects
-  Contact
+  <main>
+    <section class="hero">
+      <header>
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="images/logo.svg" alt="Sunnyside agency" />
+          </a>
+          <a href="#" class="hamburger-menu" id="hamburger-menu">
+            <img src="images/icon-hamburger.svg" alt="hamburger menu">
+          </a>
+          <nav class="main-menu">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#" class="active">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="container">
+        <h1>We are creatives</h1>
+        <span class="icon icon-arrow-down"></span>
+      </div>
+    </section>
 
-  We are creatives
+    <section class="feature">
+      <div class="container reverse">
+        <img src="images/desktop/image-transform.jpg" alt="Transform your brand">
+        <div class="description">
+          <h2>Transform your brand</h2>
+          <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </section>
 
-  Transform your brand
+    <section class="feature">
+      <div class="container">
+        <img src="images/desktop/image-stand-out.jpg" alt="Stand out to the right audience">
+        <div class="description">
+          <h2>Stand out to the right audience</h2>
+          <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </section>
 
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
+    <section class="feature-sub">
+      <div class="container">
+        <article class="feature-sub__block feature-sub__block--graphic">
+          <aside class="description">
+            <h2>Graphic design</h2>
+            <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+          </aside>
+        </article>
 
-  Learn more
+        <article class="feature-sub__block feature-sub__block--photographic">
+          <aside class="description">
+            <h2>Photography</h2>
+            <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+          </aside>
+        </article>
+      </div>
+    </section>
 
-  Stand out to the right audience
+    <section class="testimonials">
+      <div class="container">
+        <h2>Client testimonials</h2>
+        <div class="testimonials-blocks">
+          <article class="testimonials-card">
+            <img class="testimonials-card__avatar" src="images/image-emily.jpg" alt="avatar - Emily R, Marketing Director" >
+            <p class="testimonials-card__description">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+            <p class="testimonials-card__summary">
+              <strong>Emily R.</strong>
+              <em>Marketing Director</em>
+            </p>
+          </article>
+          <article class="testimonials-card">
+            <img class="testimonials-card__avatar" src="images/image-thomas.jpg" alt="avatar - Thomas S, Chief Operating Officer" >
+            <p class="testimonials-card__description">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+            <p class="testimonials-card__summary">
+              <strong>Thomas S.</strong>
+              <em>Chief Operating Officer</em>
+            </p>
+          </article>
+          <article class="testimonials-card">
+            <img class="testimonials-card__avatar" src="images/image-jennie.jpg" alt="avatar - Jennie F, Business Owner" >
+            <p class="testimonials-card__description">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <p class="testimonials-card__summary">
+              <strong>Jennie F.</strong>
+              <em>Business Owner</em>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+    <section class="works">
+      <div class="container">
+        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="">
+        <img src="images/desktop/image-gallery-orange.jpg" alt="">
+        <img src="images/desktop/image-gallery-cone.jpg" alt="">
+        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="">
+      </div>
+    </section>
+  </main>
 
-  Learn more
+  <footer class="footer">
+    <div class="container">
+      <img class="footer__logo" src="images/logo.svg" alt="" >
+      <nav class="footer__links">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+      </nav>
 
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+      <nav class="footer__social-links">
+        <ul>
+          <li><a href="#"><img src="images/icon-facebook.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/icon-instagram.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/icon-twitter.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/icon-pinterest.svg" alt=""></a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-
-  Client testimonials
-
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
-
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
-
-  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-  Jennie F.
-  Business Owner
-
-  About
-  Services
-  Projects
-  Contact
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
+  <script src="js/script.js"></script>
 </body>
 </html>

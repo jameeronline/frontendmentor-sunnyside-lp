@@ -1,0 +1,16 @@
+.icon{
+    display: inline-block;
+    background-size: contain;
+
+    &-arrow-down{
+        background: url(../images/icon-arrow-down.svg) no-repeat center;
+        height: 5.625rem;
+        width: 1.875rem;
+    }
+
+    @media (min-width: $responsive-tablet){
+        height: 7rem;
+        width: 2rem;
+        margin-top: 6.5rem;
+    }
+}
