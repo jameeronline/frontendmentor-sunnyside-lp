@@ -15,15 +15,10 @@
 
   <!-- Styles 👍 -->
   <link rel="stylesheet" href="css/index.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
 </head>
 <body>
   <section class="hero">
-    <header>
+    <div class="header">
       <div class="container">
         <a href="#" class="logo">
           <img src="images/logo.svg" alt="Sunnyside agency" />
@@ -40,7 +35,7 @@
           </ul>
         </nav>
       </div>
-    </header>
+    </div>
     <div class="hero__content">
       <h1>We are creatives</h1>
       <span class="icon icon-arrow-down"></span>
@@ -70,26 +65,31 @@
     </section>
 
     <section class="feature-sub">
+      <header class="visually-hidden">
+        <h2>Featured Services</h2>
+      </header>
       <div class="container">
         <article class="feature-sub__block feature-sub__block--graphic">
-          <aside class="description">
-            <h2>Graphic design</h2>
+          <div class="description">
+            <h3>Graphic design</h3>
             <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
-          </aside>
+          </div>
         </article>
 
         <article class="feature-sub__block feature-sub__block--photographic">
-          <aside class="description">
-            <h2>Photography</h2>
+          <div class="description">
+            <h3>Photography</h3>
             <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
-          </aside>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="testimonials">
       <div class="container">
-        <h2>Client testimonials</h2>
+        <header>
+          <h2>Client testimonials</h2>
+        </header>
         <div class="testimonials-blocks">
           <article class="testimonials-card">
             <img class="testimonials-card__avatar" src="images/image-emily.jpg" alt="avatar - Emily R, Marketing Director" >
@@ -120,11 +120,14 @@
     </section>
 
     <section class="works">
+      <header class="visually-hidden">
+        <h2>Recent Works</h2>
+      </header>
       <div class="container">
-        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="">
-        <img src="images/desktop/image-gallery-orange.jpg" alt="">
-        <img src="images/desktop/image-gallery-cone.jpg" alt="">
-        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="">
+        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="recent works - milkbottles">
+        <img src="images/desktop/image-gallery-orange.jpg" alt="recent works - orange">
+        <img src="images/desktop/image-gallery-cone.jpg" alt="recent works - cone">
+        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="recent works - sugarcubes">
       </div>
     </section>
   </main>
@@ -143,19 +146,19 @@
 
       <nav class="footer__social-links">
         <ul>
-          <li><a href="#"><img src="images/icon-facebook.svg" alt=""></a></li>
-          <li><a href="#"><img src="images/icon-instagram.svg" alt=""></a></li>
-          <li><a href="#"><img src="images/icon-twitter.svg" alt=""></a></li>
-          <li><a href="#"><img src="images/icon-pinterest.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/icon-facebook.svg" alt="link to facebook page"></a></li>
+          <li><a href="#"><img src="images/icon-instagram.svg" alt="link to instagram"></a></li>
+          <li><a href="#"><img src="images/icon-twitter.svg" alt="link to twitter"></a></li>
+          <li><a href="#"><img src="images/icon-pinterest.svg" alt="link to pinterest"></a></li>
         </ul>
       </nav>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Jamal Mohamed Ameer</a>.
+      </div>
     </div>
   </footer>
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 
   <script src="js/script.js"></script>
 </body>

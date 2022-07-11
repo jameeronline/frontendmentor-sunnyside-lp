@@ -19,7 +19,7 @@ body{
 }
 
 // Header
-header{
+.header{
     padding: 2rem 1rem;
     position: relative;
     // top: 0;
@@ -33,6 +33,9 @@ header{
 
     .hamburger-menu{
         padding: 6px;
+        position: relative;
+        top: 1px;
+
         @media (min-width: $responsive-mobile){
            display: none;
         }
@@ -396,7 +399,7 @@ header{
         }
     }
 
-    h2{
+    h3{
         font-size: 1.75rem;
         font-weight: 900;
         line-height: 1.2;
@@ -516,7 +519,8 @@ header{
 
 .footer{
     background-color: $bg-cyan;
-    padding: 4.5rem 0;
+    padding: 4.5rem 1rem;
+    position: relative;
 
     .container{
         display: flex;
@@ -545,5 +549,18 @@ header{
 
     &__social-links{
         margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+
+    .attribution {
+        font-size: 14px;
+        text-align: center;
+        position: absolute;
+        bottom: 1rem;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
     }
 }
