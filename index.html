@@ -18,7 +18,7 @@
 </head>
 <body>
   <section class="hero">
-    <div class="header">
+    <header class="header">
       <div class="container">
         <a href="#" class="logo">
           <img src="images/logo.svg" alt="Sunnyside agency" />
@@ -35,34 +35,38 @@
           </ul>
         </nav>
       </div>
-    </div>
+    </header>
     <div class="hero__content">
       <h1>We are creatives</h1>
       <span class="icon icon-arrow-down"></span>
     </div>
   </section>
   <main>
-    <section class="feature">
+    <article class="feature">
       <div class="container reverse">
         <img src="images/desktop/image-transform.jpg" alt="Transform your brand">
         <div class="description">
-          <h2>Transform your brand</h2>
+          <header>
+            <h2>Transform your brand</h2>
+          </header>
           <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
           <a href="#">Learn More</a>
         </div>
       </div>
-    </section>
+    </article>
 
-    <section class="feature">
+    <article class="feature">
       <div class="container">
         <img src="images/desktop/image-stand-out.jpg" alt="Stand out to the right audience">
         <div class="description">
-          <h2>Stand out to the right audience</h2>
+          <header>
+            <h2>Stand out to the right audience</h2>
+          </header>
           <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
           <a href="#" class="secondary">Learn More</a>
         </div>
       </div>
-    </section>
+    </article>
 
     <section class="feature-sub">
       <header class="visually-hidden">
@@ -71,14 +75,18 @@
       <div class="container">
         <article class="feature-sub__block feature-sub__block--graphic">
           <div class="description">
-            <h3>Graphic design</h3>
+            <header>
+              <h3>Graphic design</h3>
+            </header>
             <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
           </div>
         </article>
 
         <article class="feature-sub__block feature-sub__block--photographic">
           <div class="description">
-            <h3>Photography</h3>
+            <header>
+              <h3>Photography</h3>
+            </header>
             <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
           </div>
         </article>
@@ -94,26 +102,26 @@
           <article class="testimonials-card">
             <img class="testimonials-card__avatar" src="images/image-emily.jpg" alt="avatar - Emily R, Marketing Director" >
             <p class="testimonials-card__description">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-            <p class="testimonials-card__summary">
+            <footer class="testimonials-card__summary">
               <strong>Emily R.</strong>
               <em>Marketing Director</em>
-            </p>
+            </footer>
           </article>
           <article class="testimonials-card">
             <img class="testimonials-card__avatar" src="images/image-thomas.jpg" alt="avatar - Thomas S, Chief Operating Officer" >
             <p class="testimonials-card__description">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-            <p class="testimonials-card__summary">
+            <footer class="testimonials-card__summary">
               <strong>Thomas S.</strong>
               <em>Chief Operating Officer</em>
-            </p>
+            </footer>
           </article>
           <article class="testimonials-card">
             <img class="testimonials-card__avatar" src="images/image-jennie.jpg" alt="avatar - Jennie F, Business Owner" >
             <p class="testimonials-card__description">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-            <p class="testimonials-card__summary">
+            <footer class="testimonials-card__summary">
               <strong>Jennie F.</strong>
               <em>Business Owner</em>
-            </p>
+            </footer>
           </article>
         </div>
       </div>
@@ -134,7 +142,10 @@
 
   <footer class="footer">
     <div class="container">
-      <img class="footer__logo" src="images/logo.svg" alt="" >
+      <figure>
+        <img class="footer__logo" src="images/logo.svg" alt="sunnyside logo" >
+      </figure>
+
       <nav class="footer__links">
         <ul>
           <li><a href="#">About</a></li>
@@ -153,10 +164,10 @@
         </ul>
       </nav>
 
-      <div class="attribution">
+      <small class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="#">Jamal Mohamed Ameer</a>.
-      </div>
+      </small>
     </div>
   </footer>
 
