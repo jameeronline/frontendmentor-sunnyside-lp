@@ -1,0 +1,82 @@
+@use "../configs" as *;
+@use "../mixins/" as *;
+
+.testimonials{
+    padding: 4rem 0;
+
+    @include breakpoint-down(lg){
+        padding: 6rem 0;
+    }
+
+    h2{
+        color: $heading-desaturated-font-color;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-family: $heading-font-family;
+        text-align: center;
+        letter-spacing: 4px;
+        margin-bottom: 2rem;
+
+        @include breakpoint-down(lg){
+            margin-bottom: 4rem;
+        }
+    }
+
+    &-blocks{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 3rem;
+
+        @include breakpoint-up(sm){
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 2rem;
+        }
+    }
+
+    &-card{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+
+        @include breakpoint-down(md){
+            gap: 3rem;
+        }
+
+        &__avatar{
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 10rem;
+
+        }
+
+        &__description{
+            line-height: 1.5;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            // Addition lines for 2 line or multiline ellipsis
+            display: -webkit-box !important;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+        }
+
+        &__summary{
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+
+            strong{
+                font-size: 1.2rem;
+                font-family: $heading-font-family;
+            }
+
+            em{
+                font-style: normal;
+                color: $heading-desaturated-font-color;
+            }
+        }
+    }
+}

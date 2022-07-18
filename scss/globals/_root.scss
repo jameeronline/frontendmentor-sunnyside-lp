@@ -1,0 +1,14 @@
+@use "../configs" as *;
+
+html,
+body{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: $base-font-color;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: 1.5;
+    overflow-x: hidden;
+}

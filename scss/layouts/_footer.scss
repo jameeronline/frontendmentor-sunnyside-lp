@@ -1,0 +1,51 @@
+@use "../configs" as *;
+
+@use "../functions" as *;
+
+.footer{
+    background-color: $bg-cyan;
+    padding: 4.5rem 1rem;
+    position: relative;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem
+    }
+
+    &__logo{
+        width: 10rem;
+    }
+
+    &__links,
+    &__social-links{
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        a{
+            color: $dark-desaturated-cyan;
+            text-decoration: none;
+        }
+    }
+
+    &__social-links{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+
+    .attribution {
+        font-size: toRem(14);
+        text-align: center;
+        position: absolute;
+        bottom: 1rem;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}

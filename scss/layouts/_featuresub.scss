@@ -1,0 +1,72 @@
+@use "../configs" as *;
+@use "../mixins/" as *;
+
+// Feature Sub Section
+.feature-sub{
+    color: $dark-desaturated-cyan;
+    text-align: center;
+
+    .container{
+        @include breakpoint-up(md){
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    &__block{
+        &--graphic{
+            background: url(../images/desktop/image-graphic-design.jpg) no-repeat center top;
+            background-size: cover;
+        }
+
+        &--photographic{
+            background: url(../images/desktop/image-photography.jpg) no-repeat center top;
+            background-size: cover;
+        }
+    }
+
+    .description{
+        padding: 60vw 2rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+
+        @include breakpoint-up(sm){
+            padding: 50vw 3rem 3rem 3rem;
+        }
+
+        @include breakpoint-up(md){
+            padding: 20rem 3rem 3rem 3rem;
+        }
+
+        @include breakpoint-up(lg){
+            padding: 20rem 6rem 3rem 6rem;
+        }
+
+        @include breakpoint-up(xl){
+            padding: 20rem 6rem 3rem 6rem;
+        }
+
+        @include breakpoint-up(xxl){
+            padding: 22rem 10rem 3rem 10rem;
+        }
+    }
+
+    h3{
+        font-size: 1.75rem;
+        font-weight: 900;
+        line-height: $heading-line-height;
+        // color: $heading-font-color;
+        font-family: $heading-font-family;
+
+        @include breakpoint-up(md){
+            font-size: 2rem;
+        }
+    }
+
+    p{
+        // color: $dark-grayish-blue;
+        line-height: $base-line-height;
+    }
+}

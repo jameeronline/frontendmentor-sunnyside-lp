@@ -1,0 +1,22 @@
+@use "../configs" as *;
+@use "../mixins/" as *;
+
+.works{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        @include breakpoint-up(xl){
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        img{
+            max-width: 100%;
+
+            @include breakpoint-down(md){
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+            }
+        }
+    }
+}

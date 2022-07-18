@@ -1,0 +1,114 @@
+@use "../configs" as *;
+@use "../mixins/" as *;
+
+// Feature Section
+.feature{
+    @include breakpoint-down(md){
+        text-align: center;
+    }
+
+    .container{
+        @include breakpoint-up(md){
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    .reverse{
+        .description{
+            @include breakpoint-up(md){
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+        }
+
+        img{
+            @include breakpoint-up(md){
+                grid-column-start: 2;
+            }
+        }
+    }
+
+    .description{
+        padding: 2.1325rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+
+        @include breakpoint-up(xl){
+            padding: 0 8rem;
+        }
+    }
+
+    img{
+        max-width: 100%;
+
+        @media (min-width: $responsive-mobile) and (max-width: ($responsive-tablet - 1)){
+            object-fit: cover;
+            aspect-ratio: 1/ 1;
+        }
+    }
+
+    h2{
+        font-size: 1.75rem;
+        font-weight: 900;
+        line-height: 1.2;
+        color: $heading-font-color;
+        font-family: $heading-font-family;
+
+        @include breakpoint-up(md){
+            font-size: 2rem;
+        }
+    }
+
+    p{
+        color: $dark-grayish-blue;
+        line-height: 1.5;
+    }
+
+    a{
+        color: $heading-font-color;
+        font-family: $heading-font-family;
+        text-decoration: none;
+        text-transform: uppercase;
+        align-self: baseline;
+        display: inline-block;
+
+        @include breakpoint-down(md){
+            margin: auto;
+        }
+
+        &:after{
+            content: '';
+            display: inline-block;
+            position: relative;
+            height: 0.5rem;
+            background-color:$yellow-light;
+            border-radius: 1rem;
+            width: 110%;
+            top: -1rem;
+            z-index: -1;
+            left: -0.3rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &:hover{
+            &:after{
+                background-color:$yellow;
+            }
+        }
+
+        &.secondary{
+            &:after{
+                background-color:$soft-red-light;
+            }
+
+            &:hover{
+                &:after{
+                    background-color:$soft-red;
+                }
+            }
+        }
+    }
+}

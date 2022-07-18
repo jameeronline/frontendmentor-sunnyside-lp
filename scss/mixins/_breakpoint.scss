@@ -1,0 +1,20 @@
+//Sass Modules
+@use "sass:string";
+@use "sass:map";
+
+@use "../configs" as *;
+
+
+@mixin breakpoint-up($breakpoint) {
+    @media (min-width: map.get($responsive-breakpoints, string.quote($breakpoint))){
+        @content;
+    }
+}
+
+
+
+@mixin breakpoint-down($breakpoint) {
+    @media (max-width: (map.get($responsive-breakpoints, string.quote($breakpoint)) - 1)){
+        @content;
+    }
+}

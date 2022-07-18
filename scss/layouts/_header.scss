@@ -1,0 +1,153 @@
+@use "../configs" as *;
+@use "../mixins/" as *;
+
+// Header
+.header{
+    padding: 2rem 1rem;
+    position: relative;
+    // top: 0;
+    background-color: $bg-blue;
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hamburger-menu{
+        padding: 6px;
+        position: relative;
+        top: 1px;
+
+        @include breakpoint-up(md){
+            display: none;
+        }
+
+        &.active{
+            background-color: $dark-blue;
+        }
+    }
+
+    .logo img{
+        width: 10rem;
+    }
+
+    nav{
+        @include breakpoint-up(md){
+            display: block;
+        }
+
+        @include breakpoint-down(md){
+            position: absolute;
+            background: white;
+            top: 110%;
+            left: 1rem;
+            right: 1rem;
+            display: none;
+            z-index: 1;
+        }
+
+        // @media (max-width: ($responsive-mobile - 1)){
+        //     position: absolute;
+        //     background: white;
+        //     top: 110%;
+        //     left: 1rem;
+        //     right: 1rem;
+        //     display: none;
+        //     z-index: 1;
+        // }
+
+        &.show{
+            display: block;
+            animation-name: FadeIn;
+            animation-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+
+        ul{
+            list-style: none;
+            padding: 2rem 0;
+            position: relative;
+
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translateY(-100%);
+                width: 0;
+                height: 0;
+                border-bottom: 2rem solid $white;
+                border-left: 2rem solid transparent;
+
+                @include breakpoint-up(md){
+                    display: none;
+                }
+            }
+
+            @include breakpoint-up(md){
+                display: flex;
+                padding: 0;
+            }
+        }
+
+        li{
+            text-align: center;
+
+            @include breakpoint-up(md){
+                margin: 0 0.25rem;
+            }
+        }
+
+        a{
+            display: inline-block;
+            padding: 1rem 0;
+            color: $grayish-blue;
+            text-decoration: none;
+            border-radius: 2rem;
+            line-height: 1;
+            transition: all 0.3s ease-in-out;
+
+            @include breakpoint-up(md){
+                color: $white;
+                padding: 1.25rem 1.5rem;
+            }
+
+            &:hover{
+                color: $heading-font-color;
+
+                @include breakpoint-up(md){
+                    color: $white;
+                    background-color: $bg-blue-light;
+                }
+            }
+
+            &.active{
+                color: $heading-font-color;
+                font-family: $heading-font-family;
+                background-color: $yellow;
+                text-transform: uppercase;
+                padding: 1.25rem 2rem;
+                margin-top: 1rem;
+
+                @include breakpoint-up(md){
+                    margin-top: 0;
+                    background-color: $white;
+                }
+
+                @media (min-width: $responsive-mobile){
+                    margin-top: 0;
+                    background-color: $white;
+                }
+
+                &:hover{
+                    @include breakpoint-up(md){
+                        color: $white;
+                        background-color: $bg-blue-light;
+                    }
+                }
+            }
+        }
+    }
+}
