@@ -1,6 +1,9 @@
+//Sass Modules
+@use "sass:math";
+
 @use "../configs" as *;
 
 @function toRem($value) {
-    $remValue: ($value / 16) + rem; 
+    $remValue: math.div($value , 16) + rem; 
     @return $remValue;
 }
