@@ -423,7 +423,7 @@ body {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 3rem;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .testimonials-blocks {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
