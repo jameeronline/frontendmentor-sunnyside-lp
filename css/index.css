@@ -40,6 +40,22 @@ body {
   }
 }
 
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .header {
   padding: 2rem 1rem;
   position: relative;
@@ -51,9 +67,14 @@ body {
   justify-content: space-between;
 }
 .header .hamburger-menu {
-  padding: 6px;
+  width: 2.25rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   top: 1px;
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
   .header .hamburger-menu {
@@ -75,7 +96,7 @@ body {
   .header nav {
     position: absolute;
     background: white;
-    top: 110%;
+    top: 100%;
     left: 1rem;
     right: 1rem;
     display: none;
@@ -102,8 +123,8 @@ body {
   transform: translateY(-100%);
   width: 0;
   height: 0;
-  border-bottom: 2rem solid hsl(0deg, 0%, 100%);
-  border-left: 2rem solid transparent;
+  border-bottom: 1rem solid hsl(0deg, 0%, 100%);
+  border-left: 1rem solid transparent;
 }
 @media (min-width: 768px) {
   .header nav ul:before {
